@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("login")
+@RequestMapping("/login")
 public class UserController {
 
   private UserSevice userSevice;
