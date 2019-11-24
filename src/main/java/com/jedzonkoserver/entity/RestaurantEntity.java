@@ -47,7 +47,7 @@ public class RestaurantEntity {
   private String province;
 
   @OneToMany(fetch = FetchType.EAGER)
-  @Column(name = "dishs")
+  @JoinColumn(name = "dishs")
   private List<DishEntity> dishs;
 
 }

@@ -52,9 +52,9 @@ public class UserEntity {
   @Column(name = "phone_number")
   private String phoneNumber;
 
-  @ManyToOne(fetch = FetchType.EAGER)
-  @Column(name = "id_restaurant")
-  private List<RestaurantEntity> id_restaurant;
+  @OneToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "restaurant_id")
+  private RestaurantEntity restaurant_id;
 
   //For admin
   UserEntity(String email, String password, String name, String userRole) {
@@ -79,11 +79,11 @@ public class UserEntity {
   }
 
   //For restaurant
-  UserEntity(String email, String password, String name, String userRole, List<RestaurantEntity> restaurant) {
+  UserEntity(String email, String password, String name, String userRole, RestaurantEntity restaurant) {
     this.email = email;
     this.password = password;
     this.name = name;
     this.userRole = userRole;
-    this.id_restaurant = restaurant;
+    this.restaurant_id = restaurant;
   }
 }
