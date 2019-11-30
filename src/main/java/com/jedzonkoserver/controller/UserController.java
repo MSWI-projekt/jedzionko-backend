@@ -2,15 +2,12 @@ package com.jedzonkoserver.controller;
 
 import com.jedzonkoserver.DTO.UserDTO;
 import com.jedzonkoserver.entity.UserEntity;
-import com.jedzonkoserver.repository.UserRepository;
 import com.jedzonkoserver.service.UserSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(value = "http://localhost:4200")
 @RestController
 @RequestMapping(value = "/login")
 public class UserController {
