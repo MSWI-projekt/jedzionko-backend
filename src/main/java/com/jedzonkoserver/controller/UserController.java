@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(value = "http://localhost:4200")
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/login")
 public class UserController {
